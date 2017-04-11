@@ -253,7 +253,7 @@ setTimeout(function () {
 			// Load site
 			var request = new XMLHttpRequest();
 
-			request.open('POST', "./metadata/list_" + node.title + ".json", true);
+			request.open('GET', "./metadata/list_" + node.title + ".json", true);
 			request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
 			request.onload = function() {
@@ -281,7 +281,7 @@ setTimeout(function () {
 
 	(function() {
 		var xmlHttp = new XMLHttpRequest();
-		xmlHttp.open("POST", "./metadata/list.json", true);
+		xmlHttp.open("GET", "./metadata/list.json", true);
 		xmlHttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 		xmlHttp.onload = function() {
 			if (!is_request_success(xmlHttp)) {
